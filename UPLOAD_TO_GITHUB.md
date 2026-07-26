@@ -2,7 +2,7 @@
 
 Intended repository:
 
-`https://github.com/md2015/language-model-lab`
+`https://github.com/mdshafiqulbaten/language-model-lab`
 
 ## Browser method
 
