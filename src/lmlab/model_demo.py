@@ -27,7 +27,7 @@ def main(argv=None):
     print(
         {
             "shape": list(logits.shape),
-            "loss": float(loss),
+            "loss": loss.item(),
             "checkpoint": str(path),
             "reload_equal": True,
         }
