@@ -6,7 +6,7 @@ Intended repository:
 
 ## Browser method
 
-1. Sign in to GitHub as `md2015`.
+1. Sign in to GitHub as `mdshafiqulbaten`.
 2. Create a new public repository named `language-model-lab`.
 3. Do not add another README, license, or `.gitignore`.
 4. Extract this ZIP.
