@@ -7,13 +7,52 @@ on:
 jobs:
   core:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Download repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python -m pip install -e ".[test]"
-      - run: python -m pytest -q
-      - run: python -m lmlab.doctor
-      - run: python -m lmlab.smoke
 
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
+      - name: Install core dependencies
+        run: python -m pip install -e ".[test]"
+
+      - name: Run complete test suite
+        run: python -m pytest -q
+
+      - name: Run environment doctor
+        run: python -m lmlab.doctor
+
+      - name: Run smoke test
+        run: python -m lmlab.smoke
+
+  model:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+
+      - name: Install PyTorch and test dependencies
+        run: python -m pip install -e ".[model,test]"
+
+      - name: Run PyTorch model tests
+        run: python -m pytest tests/test_model_torch.py -q
+
+      - name: Test checkpoint creation and reload
+        run: python -m lmlab.model_demo --checkpoint reports/tiny_gpt.pt
