@@ -1,0 +1,5 @@
+Build small models before large models.
+AI শেখা নিরাপদ ও পুনরুৎপাদনযোগ্য হওয়া উচিত।
+Svenska språk behöver rättvis tokenisering.
+def causal_mask(length): return True
+
