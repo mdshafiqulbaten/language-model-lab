@@ -23,7 +23,7 @@ git init
 git branch -M main
 git add .
 git commit -m "Publish book companion code v1.0.0"
-git remote add origin https://github.com/md2015/language-model-lab.git
+git remote add origin https://github.com/mdshafiqulbaten/language-model-lab.git
 git push -u origin main
 ```
 
