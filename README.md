@@ -1,4 +1,8 @@
 # Language Model Lab
+[![Tests](https://github.com/mdshafiqulbaten/language-model-lab/actions/workflows/tests.yml/badge.svg)](https://github.com/mdshafiqulbaten/language-model-lab/actions/workflows/tests.yml)
+[![Release](https://img.shields.io/github/v/release/mdshafiqulbaten/language-model-lab)](https://github.com/mdshafiqulbaten/language-model-lab/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](pyproject.toml)
 
 Official companion code for **Build Your Own Language Model: From Raw Text and
 Tokenizers to a Safe, Tool-Using Multimodal AI Assistant** by Md Shafiqul Baten
@@ -49,7 +53,5 @@ This is educational code, not a production service. Use only data you have the
 right to process. Never commit credentials, private datasets, model secrets, or
 restricted checkpoints. PyTorch tests skip when PyTorch is not installed; a
 skipped test is not a passed test.
-
 See [BOOK_CODE_INDEX.md](BOOK_CODE_INDEX.md) and
-[UPLOAD_TO_GITHUB.md](UPLOAD_TO_GITHUB.md).
-
+[TEST_STATUS.md](TEST_STATUS.md).
