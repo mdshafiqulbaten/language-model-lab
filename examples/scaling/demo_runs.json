@@ -1,0 +1,15 @@
+[
+  {
+    "name": "tiny",
+    "parameters": 123000,
+    "tokens": 1000000,
+    "validation_loss": 4.2
+  },
+  {
+    "name": "small",
+    "parameters": 1000000,
+    "tokens": 5000000,
+    "validation_loss": 3.7
+  }
+]
+
